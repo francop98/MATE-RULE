@@ -1,9 +1,9 @@
 [
   {
     "id": "camionero",
-    "nombre": "Mate Camionero",
     "tipo": "mate",
-    "descripcion": "El mate camionero es el más popular de Argentina. Su forma redonda y tamaño generoso lo hacen ideal para quienes disfrutan de cebadas largas y abundantes. Hecho de calabaza curada con aro y base de alpaca, acompaña cada jornada con la fuerza del trabajo y la camaradería.",
+    "nombre": "Mate Camionero",
+    "descripcion": "El más popular de Argentina. Su forma redonda y tamaño generoso lo hacen ideal para cebadas largas y abundantes. Hecho de calabaza curada con aro y base de alpaca.",
     "caracteristicas": [
       "Calabaza curada naturalmente",
       "Aro y base de alpaca o acero inoxidable",
@@ -11,15 +11,15 @@
       "Apto para todo tipo de yerba"
     ],
     "precio": 85000,
-    "imagen": "../documentos/camionero.jpg",
+    "imagen": "./documentos/camionero.jpg",
     "alt": "Mate tipo camionero de calabaza con aro de metal",
     "href": "./pages/camionero.html"
   },
   {
     "id": "torpedo",
-    "nombre": "Mate Torpedo",
     "tipo": "mate",
-    "descripcion": "El mate torpedo se caracteriza por su forma alargada y estrecha. Preferido por los conocedores que buscan una cebada más concentrada y un sabor más intenso. La forma cilíndrica favorece el filtrado de la yerba y permite disfrutar del mate hasta el final sin desperdiciar nada.",
+    "nombre": "Mate Torpedo",
+    "descripcion": "Forma alargada y estrecha para una cebada más concentrada y un sabor más intenso. La forma cilíndrica favorece el filtrado de la yerba.",
     "caracteristicas": [
       "Forma cilíndrica alargada",
       "Ideal para yerba lavada o compacta",
@@ -27,15 +27,15 @@
       "Fácil de curar y mantener"
     ],
     "precio": 80000,
-    "imagen": "../documentos/torpedo.jpg",
+    "imagen": "./documentos/torpedo.jpg",
     "alt": "Mate torpedo de calabaza alargada",
     "href": "./pages/torpedo.html"
   },
   {
     "id": "metal",
-    "nombre": "Mate de Metal",
     "tipo": "mate",
-    "descripcion": "Los mates de metal combinan durabilidad y modernidad. Fabricados en acero inoxidable, son perfectos para llevar en viajes, al trabajo o al aire libre. No requieren curado, son fáciles de limpiar y mantienen la temperatura del agua por más tiempo que otros materiales.",
+    "nombre": "Mate de Metal",
+    "descripcion": "Durabilidad y modernidad en acero inoxidable. Perfecto para viajes, el trabajo o al aire libre. No requiere curado y mantiene la temperatura del agua por más tiempo.",
     "caracteristicas": [
       "Acero inoxidable 304, apto para alimentos",
       "No requiere curado previo",
@@ -43,15 +43,15 @@
       "Disponible en varios colores y acabados"
     ],
     "precio": 40000,
-    "imagen": "../documentos/metal.jpg",
+    "imagen": "./documentos/metal.jpg",
     "alt": "Mate de acero inoxidable plateado",
     "href": "./pages/metal.html"
   },
   {
     "id": "madera",
-    "nombre": "Mate de Madera",
     "tipo": "mate",
-    "descripcion": "Los mates de madera son una pieza de artesanía pura. Torneados a mano con maderas nobles como el palo santo, el quebracho o el roble, cada uno es único e irrepetible. Con el tiempo y el uso correcto, la madera absorbe los sabores de la yerba y mejora notablemente el gusto del mate.",
+    "nombre": "Mate de Madera",
+    "descripcion": "Artesanía pura. Torneados a mano con maderas nobles como el palo santo, el quebracho o el roble. Con el uso correcto, la madera absorbe los sabores y mejora el gusto.",
     "caracteristicas": [
       "Torneados artesanalmente en maderas nobles",
       "Cada pieza es única e irrepetible",
@@ -59,128 +59,125 @@
       "Mejora su sabor con el uso y el tiempo"
     ],
     "precio": 55000,
-    "imagen": "../documentos/madera.jpg",
+    "imagen": "./documentos/madera.jpg",
     "alt": "Mate de madera torneado artesanalmente",
     "href": "./pages/madera.html"
   },
   {
-    "id": "bombilla-alpaca",
-    "nombre": "Bombilla de Alpaca",
+    "id": "bombilla-clasica",
     "tipo": "bombilla",
-    "descripcion": "Bombilla de alpaca plateada antialérgica. Filtrado perfecto sin que pase yerba ni se tape. Compatible con todos los tipos de mate.",
+    "nombre": "Bombilla Clásica de Alpaca",
+    "descripcion": "La más tradicional. Fabricada en alpaca con filtro de espiral, ideal para yerba suelta. Resistente y fácil de limpiar.",
     "caracteristicas": [
-      "Alpaca plateada antialérgica",
-      "Filtro de malla fina",
-      "Compatible con todos los tipos de mate",
-      "Fácil limpieza"
+      "Material: alpaca plateada",
+      "Filtro de espiral antiatascamiento",
+      "Largo: 19 cm",
+      "Compatible con cualquier tipo de mate"
     ],
-    "precio": 1200,
-    "imagen": "../documentos/metal.jpg",
-    "alt": "Bombilla de alpaca plateada"
+    "precio": 8500
   },
   {
     "id": "bombilla-acero",
-    "nombre": "Bombilla de Acero",
     "tipo": "bombilla",
-    "descripcion": "Bombilla de acero inoxidable 304 de larga duración. Filtro de cucharilla para un mate limpio y sabroso.",
+    "nombre": "Bombilla Acero Inoxidable",
+    "descripcion": "Durable y moderna, en acero inoxidable 304. No altera el sabor del mate y se limpia con facilidad. Ideal para uso diario.",
     "caracteristicas": [
-      "Acero inoxidable 304",
-      "Filtro de cucharilla",
-      "Larga durabilidad",
-      "Apta para lavavajillas"
-    ],
-    "precio": 950,
-    "imagen": "../documentos/metal.jpg",
-    "alt": "Bombilla de acero inoxidable"
-  },
-  {
-    "id": "bombilla-bronce",
-    "nombre": "Bombilla de Bronce",
-    "tipo": "bombilla",
-    "descripcion": "Bombilla artesanal de bronce con terminación trabajada a mano. Aporta un sabor característico apreciado por los matiadores tradicionales.",
-    "caracteristicas": [
-      "Bronce de alta calidad",
-      "Terminación artesanal",
+      "Acero inoxidable 304 apto para alimentos",
       "Filtro de malla fina",
-      "Estética premium"
+      "Largo: 20 cm",
+      "Sin sabor residual"
     ],
-    "precio": 1800,
-    "imagen": "../documentos/metal.jpg",
-    "alt": "Bombilla de bronce artesanal"
+    "precio": 12000
   },
   {
-    "id": "yerba-tradicional",
-    "nombre": "Yerba Tradicional",
-    "tipo": "yerba",
-    "descripcion": "Yerba mate tradicional con palo, cosecha seleccionada de Misiones. Sabor equilibrado, ideal para todo tipo de mate.",
+    "id": "bombilla-pico-loro",
+    "tipo": "bombilla",
+    "nombre": "Bombilla Pico de Loro",
+    "descripcion": "Diseño con extremo curvo que facilita la cebada sin mover la yerba. Muy usada para mates torpedo y de madera.",
     "caracteristicas": [
-      "Con palo, estilo tradicional",
-      "Cosecha seleccionada de Misiones",
-      "Sabor equilibrado y suave",
-      "Presentación 500 g"
+      "Extremo curvo antideslizante",
+      "Material: alpaca con baño dorado",
+      "Largo: 18 cm",
+      "Ideal para mates de boca estrecha"
     ],
-    "precio": 2800,
-    "imagen": "../documentos/camionero.jpg",
-    "alt": "Paquete de yerba mate tradicional"
+    "precio": 10500
   },
   {
-    "id": "yerba-sin-palo",
-    "nombre": "Yerba Sin Palo",
+    "id": "yerba-amanda",
     "tipo": "yerba",
-    "descripcion": "Yerba mate sin palo, más concentrada y de sabor intenso. Preferida por matiadores exigentes que buscan más rendimiento en cada cebada.",
+    "nombre": "Yerba Amanda Tradicional 1 kg",
+    "descripcion": "Yerba clásica con palo, sabor equilibrado y buena duración de cebada. Una de las más consumidas en el país.",
     "caracteristicas": [
-      "Sin palo, sabor intenso",
-      "Mayor rendimiento por cebada",
-      "Corte fino para mejor filtrado",
-      "Presentación 500 g"
+      "Con palo",
+      "Corte tradicional",
+      "Estacionamiento: 12 meses",
+      "Origen: Misiones, Argentina"
     ],
-    "precio": 3200,
-    "imagen": "../documentos/torpedo.jpg",
-    "alt": "Paquete de yerba mate sin palo"
+    "precio": 6200
   },
   {
-    "id": "yerba-compuesta",
-    "nombre": "Yerba Compuesta",
+    "id": "yerba-cbse",
     "tipo": "yerba",
-    "descripcion": "Blend especial con hierbas naturales: cedrón, menta y burrito. Ideal para quienes buscan un mate con un perfil aromático diferente.",
+    "nombre": "Yerba CBSé Hierbas Serranas 500 g",
+    "descripcion": "Mezcla de yerba con hierbas serranas que suaviza el sabor y aporta un aroma agradable. Ideal para quienes prefieren un mate menos amargo.",
     "caracteristicas": [
-      "Blend con cedrón, menta y burrito",
+      "Con hierbas serranas",
       "Sabor suave y aromático",
-      "Cosecha artesanal",
-      "Presentación 500 g"
+      "Sin TACC",
+      "Peso: 500 g"
     ],
-    "precio": 3600,
-    "imagen": "../documentos/madera.jpg",
-    "alt": "Paquete de yerba mate compuesta"
+    "precio": 4800
   },
   {
-    "id": "pava-electrica",
-    "nombre": "Pava Eléctrica",
-    "tipo": "accesorio",
-    "descripcion": "Pava eléctrica con control de temperatura ajustable entre 70°C y 90°C. La temperatura ideal para el mate es entre 75°C y 80°C. Capacidad 1.2 litros.",
+    "id": "yerba-taragui",
+    "tipo": "yerba",
+    "nombre": "Yerba Taragüí Sin Palo 500 g",
+    "descripcion": "Para los que prefieren cebadas cortas e intensas. Sin palo, con corte fino y estacionamiento prolongado para un sabor más concentrado.",
     "caracteristicas": [
-      "Control de temperatura 70°C–90°C",
-      "Capacidad 1.2 litros",
-      "Acero inoxidable",
-      "Apagado automático"
+      "Sin palo",
+      "Corte fino",
+      "Estacionamiento: 18 meses",
+      "Origen: Corrientes, Argentina"
     ],
-    "precio": 28000,
-    "imagen": "../documentos/metal.jpg",
-    "alt": "Pava eléctrica con control de temperatura"
+    "precio": 5100
   },
   {
-    "id": "termo",
-    "nombre": "Termo Stanley 1L",
+    "id": "pava-acero",
     "tipo": "accesorio",
-    "descripcion": "Termo de acero inoxidable de 1 litro. Mantiene el agua caliente hasta 24 horas. El compañero perfecto para el mate en cualquier lugar.",
+    "nombre": "Pava de Acero Inoxidable 1 L",
+    "descripcion": "Pava de acero inoxidable con pico curvo para un vertido preciso sin quemar la yerba. Fondo difusor para calentar uniformemente.",
     "caracteristicas": [
-      "Capacidad 1 litro",
-      "Mantiene calor 24 horas",
-      "Acero inoxidable 18/8",
-      "Libre de BPA"
+      "Capacidad: 1 litro",
+      "Acero inoxidable 18/10",
+      "Pico curvo de precisión",
+      "Apta para todo tipo de hornallas"
     ],
-    "precio": 45000,
-    "imagen": "../documentos/metal.jpg",
-    "alt": "Termo Stanley de acero inoxidable"
+    "precio": 18500
+  },
+  {
+    "id": "porta-termo",
+    "tipo": "accesorio",
+    "nombre": "Porta Termo de Cuero",
+    "descripcion": "Funda artesanal de cuero para termo de hasta 1 litro. Protege el termo y le da un estilo clásico al equipo matero completo.",
+    "caracteristicas": [
+      "Cuero vacuno tratado",
+      "Ajuste universal hasta 1 L",
+      "Costuras reforzadas",
+      "Disponible en marrón y negro"
+    ],
+    "precio": 14000
+  },
+  {
+    "id": "set-limpieza",
+    "tipo": "accesorio",
+    "nombre": "Set de Limpieza para Mate",
+    "descripcion": "Kit completo para mantener el mate y la bombilla en perfecto estado. Incluye cepillo para bombilla, escobilla para mate y paño de microfibra.",
+    "caracteristicas": [
+      "Cepillo para bombilla (acero flexible)",
+      "Escobilla para mate",
+      "Paño de microfibra",
+      "Presentación en bolsita de tela"
+    ],
+    "precio": 7200
   }
 ]

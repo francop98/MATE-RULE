@@ -2,18 +2,27 @@
 
 /* =========================================================
    catalogo.js — mate-rule
-   Carga los productos desde /data/productos.json mediante fetch
-   y los renderiza dinámicamente en las páginas de catálogo.
+   Carga los productos desde /data/productos.json y los
+   renderiza dinámicamente en las páginas de catálogo.
    ========================================================= */
 
 
-// ── Renderizar grid de mates en index.html ────────────────────────────────────
+// Ruta base al JSON según la ubicación de la página
+
+function rutaProductos() {
+  const path = window.location.pathname;
+  if (path.includes('/pages/')) return '../data/productos.json';
+  return './data/productos.json';
+}
+
+
+// Grid de mates en index.html
 
 (function initGridMates() {
   const grid = document.getElementById('grid-mates');
   if (!grid) return;
 
-  fetch('./data/productos.json')
+  fetch(rutaProductos())
     .then((res) => {
       if (!res.ok) throw new Error('No se pudo cargar productos.json');
       return res.json();
@@ -36,7 +45,7 @@
               height="220">
             <div class="tarjeta-mate__body">
               <h3 class="tarjeta-mate__nombre">${producto.nombre}</h3>
-              <p class="tarjeta-mate__desc">${producto.descripcion.substring(0, 45)}…</p>
+              <p class="tarjeta-mate__desc">${producto.descripcion.substring(0, 55)}…</p>
             </div>
           </a>
           <button
@@ -49,7 +58,7 @@
         grid.appendChild(article);
       });
 
-      // Activar animaciones scroll
+      // Animaciones scroll
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -67,7 +76,7 @@
       grid.querySelectorAll('.tarjeta-mate__agregar').forEach((btn) => {
         btn.addEventListener('click', (e) => {
           e.preventDefault();
-          const id      = btn.dataset.id;
+          const id = btn.dataset.id;
           const producto = mates.find((p) => p.id === id);
           if (producto && window.MateRule) {
             window.MateRule.agregarAlCarrito(producto);
@@ -76,18 +85,19 @@
       });
     })
     .catch(() => {
-      grid.innerHTML = '<p style="text-align:center;color:#7a6a5a;">No se pudieron cargar los productos. Intentá de nuevo más tarde.</p>';
+      grid.innerHTML =
+        '<p style="text-align:center;color:#7a6a5a;">No se pudieron cargar los productos. Intentá de nuevo más tarde.</p>';
     });
 })();
 
 
-// ── Renderizar página de bombillas ────────────────────────────────────────────
+// Página de bombillas
 
 (function initBombillas() {
   const contenedor = document.getElementById('bombillas-lista');
   if (!contenedor) return;
 
-  fetch('../data/productos.json')
+  fetch(rutaProductos())
     .then((res) => res.json())
     .then((productos) => {
       const bombillas = productos.filter((p) => p.tipo === 'bombilla');
@@ -99,13 +109,13 @@
 })();
 
 
-// ── Renderizar página de yerbas ───────────────────────────────────────────────
+// Página de yerbas
 
 (function initYerbas() {
   const contenedor = document.getElementById('yerbas-lista');
   if (!contenedor) return;
 
-  fetch('../data/productos.json')
+  fetch(rutaProductos())
     .then((res) => res.json())
     .then((productos) => {
       const yerbas = productos.filter((p) => p.tipo === 'yerba');
@@ -117,13 +127,13 @@
 })();
 
 
-// ── Renderizar página de accesorios ───────────────────────────────────────────
+// Página de accesorios
 
 (function initAccesorios() {
   const contenedor = document.getElementById('accesorios-lista');
   if (!contenedor) return;
 
-  fetch('../data/productos.json')
+  fetch(rutaProductos())
     .then((res) => res.json())
     .then((productos) => {
       const accesorios = productos.filter((p) => p.tipo === 'accesorio');
@@ -135,7 +145,7 @@
 })();
 
 
-// ── Botón "Agregar al carrito" en páginas de detalle de producto ──────────────
+// Botón "Agregar al carrito" en páginas de detalle
 
 (function initDetalleProducto() {
   const btn = document.getElementById('btn-agregar-detalle');
@@ -153,13 +163,14 @@
 })();
 
 
-// ── Helper: renderizar lista de productos como tarjetas ───────────────────────
+// Helper: renderizar lista de productos como tarjetas
 
 function renderizarProductos(contenedor, productos) {
   contenedor.innerHTML = '';
 
   if (!productos.length) {
-    contenedor.innerHTML = '<p style="color:#7a6a5a;text-align:center;">No hay productos disponibles.</p>';
+    contenedor.innerHTML =
+      '<p style="color:#7a6a5a;text-align:center;">No hay productos disponibles.</p>';
     return;
   }
 
@@ -187,7 +198,7 @@ function renderizarProductos(contenedor, productos) {
 
   contenedor.querySelectorAll('.producto-card__btn').forEach((btn) => {
     btn.addEventListener('click', () => {
-      const id      = btn.dataset.id;
+      const id = btn.dataset.id;
       const producto = productos.find((p) => p.id === id);
       if (producto && window.MateRule) {
         window.MateRule.agregarAlCarrito(producto);

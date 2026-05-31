@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mates Torpedo mate-rule. Forma alargada y estrecha para una cebada más concentrada y un sabor más intenso.">
-  <meta name="keywords" content="Mates Torpedo, mate, mate-rule, artesanal, Bahía Blanca">
+  <meta name="description" content="Tu carrito de compras en mate-rule. Revisá tus productos y confirmá tu pedido.">
   <meta name="author" content="mate-rule">
   <meta name="robots" content="index, follow">
-  <title>Mates Torpedo · mate-rule</title>
+  <title>Carrito de compras · mate-rule</title>
   <link rel="icon" type="image/svg+xml" href="../documentos/favicon.svg">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="../styles/styles.css">
@@ -36,7 +35,7 @@
       <div class="collapse navbar-collapse" id="navPrincipal">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="../index.html">Mates</a></li>
               <li><a class="dropdown-item" href="../pages/bombillas.html">Bombillas</a></li>
@@ -48,7 +47,7 @@
             <a class="nav-link" href="../pages/curar-mate.html">Cómo curar el mate</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../pages/carrito.html">Carrito</a>
+            <a class="nav-link active" href="../pages/carrito.html" aria-current="page">Carrito</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../pages/contacto.html">Contacto</a>
@@ -63,33 +62,61 @@
   </nav>
 
   <nav class="breadcrumb-mate" aria-label="Ruta de navegación">
-    <a href="../index.html">Inicio</a><span> › </span><span>Mates Torpedo</span>
+    <a href="../index.html">Inicio</a><span> › </span><span>Carrito</span>
   </nav>
 
   <main>
-    <article class="producto-detalle animate-fade-in">
-      <img class="producto-detalle__img" src="../documentos/torpedo.jpg" alt="Mate Torpedo" loading="lazy" width="900" height="380">
-      <h2 class="producto-detalle__titulo">Mates Torpedo</h2>
-      <p class="producto-detalle__descripcion">El mate torpedo se caracteriza por su forma alargada y estrecha. Preferido por los conocedores que buscan una cebada más concentrada y un sabor más intenso. La forma cilíndrica favorece el filtrado de la yerba y permite disfrutar del mate hasta el final sin desperdiciar nada.</p>
-      <div class="producto-detalle__caracteristicas">
-        <h3>Características</h3>
-        <ul>
-          <li>Forma cilíndrica alargada</li>
-          <li>Ideal para yerba lavada o compacta</li>
-          <li>Boca estrecha para mayor filtrado</li>
-          <li>Fácil de curar y mantener</li>
-        </ul>
+    <section class="seccion" aria-labelledby="titulo-carrito">
+      <h2 class="seccion__titulo" id="titulo-carrito">Tu carrito</h2>
+
+      <div class="carrito-page" id="carrito-page">
+
+        <!-- Estado vacío -->
+        <div class="carrito-vacio-page" id="carrito-vacio-msg">
+          <p class="carrito-vacio-page__icono">🧉</p>
+          <p class="carrito-vacio-page__texto">Tu carrito está vacío.</p>
+          <a href="../index.html" class="carrito-vacio-page__btn">Ver productos</a>
+        </div>
+
+        <!-- Tabla de productos -->
+        <div class="carrito-contenido" id="carrito-contenido" style="display:none;">
+          <div class="carrito-tabla-wrapper">
+            <table class="carrito-tabla" aria-label="Productos en el carrito">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Precio unitario</th>
+                  <th>Cantidad</th>
+                  <th>Subtotal</th>
+                  <th><span class="sr-only">Eliminar</span></th>
+                </tr>
+              </thead>
+              <tbody id="carrito-tbody"></tbody>
+            </table>
+          </div>
+
+          <div class="carrito-resumen">
+            <div class="carrito-resumen__inner">
+              <div class="carrito-resumen__fila">
+                <span>Subtotal</span>
+                <span id="resumen-subtotal">$0</span>
+              </div>
+              <div class="carrito-resumen__fila carrito-resumen__fila--envio">
+                <span>Envío</span>
+                <span>A coordinar</span>
+              </div>
+              <div class="carrito-resumen__fila carrito-resumen__fila--total">
+                <span>Total</span>
+                <span id="resumen-total">$0</span>
+              </div>
+              <button id="btn-checkout" class="carrito-resumen__btn">Confirmar pedido</button>
+              <a href="../index.html" class="carrito-resumen__seguir">← Seguir comprando</a>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <p class="producto-detalle__precio">$80.000</p>
-      <button
-        id="btn-agregar-detalle"
-        class="producto-detalle__btn"
-        data-product-id="torpedo"
-        data-product-nombre="Mate Torpedo"
-        data-product-precio="80000">
-        + Agregar al carrito
-      </button>
-    </article>
+    </section>
   </main>
 
   <footer class="footer" aria-label="Pie de página">
@@ -109,7 +136,6 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmAgdZ3K4rK3kPSRovGbYmQ5MwH" crossorigin="anonymous"></script>
   <script src="../js/carrito.js"></script>
-  <script src="../js/catalogo.js"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>
