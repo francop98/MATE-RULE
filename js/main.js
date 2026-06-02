@@ -1,21 +1,10 @@
 'use strict';
 
-/* =========================================================
-   main.js — mate-rule
-   Requiere: SweetAlert2 (cargado en el HTML antes de este script)
-   ========================================================= */
-
-
-// Ruta base al JSON según la ubicación de la página
-
 function rutaProductos() {
   const path = window.location.pathname;
   if (path.includes('/pages/')) return '../data/productos.json';
   return './data/productos.json';
 }
-
-
-// Animaciones de entrada con IntersectionObserver
 
 (function initScrollAnimations() {
   const elementos = document.querySelectorAll(
@@ -38,8 +27,6 @@ function rutaProductos() {
   elementos.forEach((el) => observer.observe(el));
 })();
 
-
-// Validación del formulario de contacto
 
 (function initFormulario() {
   const form = document.getElementById('formContacto');
@@ -97,9 +84,6 @@ function rutaProductos() {
       </div>`;
   }
 })();
-
-
-// Búsqueda funcional sobre productos
 
 (function initBusqueda() {
   const forms = document.querySelectorAll('form[role="search"]');
@@ -169,9 +153,6 @@ function rutaProductos() {
     });
   }
 })();
-
-
-// Marca el nav-link activo según la URL actual
 
 (function setActiveNav() {
   const path = window.location.pathname.split('/').pop();

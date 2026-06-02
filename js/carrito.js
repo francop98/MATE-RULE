@@ -1,17 +1,6 @@
 'use strict';
 
-/* =========================================================
-   carrito.js  ·  mate-rule
-   - Estado persistido en localStorage
-   - Badge de cantidad en el ícono del navbar (todas las páginas)
-   - Renderizado de tabla en carrito.html
-   - Checkout simulado con SweetAlert2
-   ========================================================= */
-
 const STORAGE_KEY = 'materule_carrito';
-
-
-// ── Persistencia ─────────────────────────────────────────
 
 function cargarCarrito() {
   try {
@@ -26,8 +15,6 @@ function guardarCarrito(carrito) {
 }
 
 
-// ── Badge del navbar (presente en TODAS las páginas) ─────
-
 function actualizarBadge() {
   const carrito = cargarCarrito();
   const contador = document.getElementById('carrito-contador');
@@ -37,9 +24,6 @@ function actualizarBadge() {
   contador.textContent = total;
   contador.style.display = total > 0 ? 'flex' : 'none';
 }
-
-
-// ── Agregar al carrito (llamado desde otras páginas) ─────
 
 function agregarAlCarrito(producto) {
   const carrito = cargarCarrito();
@@ -65,9 +49,6 @@ function agregarAlCarrito(producto) {
     customClass: { popup: 'swal-toast-mate' },
   });
 }
-
-
-// ── Renderizar tabla en carrito.html ─────────────────────
 
 function renderizarPaginaCarrito() {
   const tbody = document.getElementById('carrito-tbody');
@@ -149,8 +130,6 @@ function renderizarPaginaCarrito() {
 }
 
 
-// ── Checkout ─────────────────────────────────────────────
-
 function iniciarCheckout() {
   const carrito = cargarCarrito();
 
@@ -209,9 +188,6 @@ function iniciarCheckout() {
   });
 }
 
-
-// ── Init ─────────────────────────────────────────────────
-
 (function init() {
   // Badge en todas las páginas
   actualizarBadge();
@@ -223,8 +199,6 @@ function iniciarCheckout() {
   if (btnCheckout) btnCheckout.addEventListener('click', iniciarCheckout);
 })();
 
-
-// ── Exportar para catalogo.js ─────────────────────────────
 
 window.MateRule = window.MateRule || {};
 window.MateRule.agregarAlCarrito = agregarAlCarrito;

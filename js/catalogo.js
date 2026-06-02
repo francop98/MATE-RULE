@@ -1,14 +1,5 @@
 'use strict';
 
-/* =========================================================
-   catalogo.js  ·  mate-rule
-   Carga los productos desde /data/productos.json mediante fetch
-   y los renderiza dinámicamente en las páginas de catálogo.
-   ========================================================= */
-
-
-// ── Grid de mates en index.html ───────────────────────────
-
 (function initGridMates() {
   const grid = document.getElementById('grid-mates');
   if (!grid) return;
@@ -50,7 +41,6 @@
         grid.appendChild(article);
       });
 
-      // Animaciones scroll
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -64,7 +54,6 @@
       );
       grid.querySelectorAll('.tarjeta-mate').forEach((el) => observer.observe(el));
 
-      // Botones agregar al carrito
       grid.querySelectorAll('.tarjeta-mate__agregar').forEach((btn) => {
         btn.addEventListener('click', (e) => {
           e.preventDefault();
@@ -80,8 +69,6 @@
     });
 })();
 
-
-// ── Botón "Agregar al carrito" en páginas de detalle ─────
 
 (function initDetalleProducto() {
   const btn = document.getElementById('btn-agregar-detalle');

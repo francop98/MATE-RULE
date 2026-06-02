@@ -1,10 +1,3 @@
-<!-- ============================================================
-  NAVBAR ACTUALIZADO — mate-rule
-  Reemplazá el <nav class="navbar ..."> completo en TODAS las páginas.
-  Ajustá las rutas (../ vs ./) según la profundidad de la página:
-    - index.html          → usar ./pages/  y  ./js/
-    - pages/*.html        → usar ../pages/ y  ../js/   (ya configurado abajo)
-  ============================================================ -->
 
 <nav class="navbar navbar-expand-lg" aria-label="Navegación principal">
   <div class="container-fluid">
@@ -53,22 +46,3 @@
     </div>
   </div>
 </nav>
-
-<!-- ============================================================
-  PARA index.html las rutas cambian así:
-    href="./pages/carrito.html"
-    href="./pages/curar-mate.html"
-    href="./pages/contacto.html"
-  Y eliminar el drawer lateral (el <div id="carrito-overlay"> y el <aside id="carrito-drawer">)
-  
-  SCRIPTS que van al final del <body> en páginas con carrito:
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/carrito.js"></script>   ← reemplaza al viejo
-    <script src="../js/catalogo.js"></script>
-    <script src="../js/main.js"></script>
-
-  En index.html las rutas de scripts son:
-    <script src="./js/carrito.js"></script>
-    <script src="./js/catalogo.js"></script>
-    <script src="./js/main.js"></script>
-  ============================================================ -->
