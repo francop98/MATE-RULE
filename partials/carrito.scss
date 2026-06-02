@@ -6,30 +6,21 @@
 
 /* ── Ícono carrito en navbar ─────────────────────────────── */
 
-.navbar-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-left: auto;
-}
-
 .btn-carrito {
   position: relative;
-  background: transparent;
-  border: none;
-  color: #c89a5a;
-  padding: 4px;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color 0.25s ease;
+  color: #c89a5a;
   text-decoration: none;
+  padding: 4px 8px;
+  transition: color 0.25s ease;
+  flex-shrink: 0;
 
   svg {
     display: block;
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
   }
 
   &:hover {
@@ -39,8 +30,8 @@
 
 .carrito-contador {
   position: absolute;
-  top: -7px;
-  right: -9px;
+  top: -6px;
+  right: -8px;
   background: #c89a5a;
   color: #1a1008;
   border-radius: 50%;
